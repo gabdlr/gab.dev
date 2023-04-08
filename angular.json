@@ -6,8 +6,7 @@
     "gabdev": {
       "i18n": {
         "sourceLocale": {
-          "code": "en",
-          "baseHref": "/"
+          "code": "en"
         },
         "locales": {
           "es": {
