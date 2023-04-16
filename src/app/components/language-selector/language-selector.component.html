@@ -11,10 +11,10 @@
   </ng-container>
 </button>
 <mat-menu #aboveMenu="matMenu" xPosition="before" yPosition="above">
-  <a mat-menu-item *ngIf="currentLang !== 'en'" href="en">
+  <a mat-menu-item *ngIf="currentLang !== 'en'" href="/en">
     <ng-container *ngTemplateOutlet="english"></ng-container>
   </a>
-  <a mat-menu-item *ngIf="currentLang !== 'es'" href="es">
+  <a mat-menu-item *ngIf="currentLang !== 'es'" href="/es">
     <ng-container *ngTemplateOutlet="spanish"></ng-container>
   </a>
 </mat-menu>
