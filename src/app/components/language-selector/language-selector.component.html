@@ -1,0 +1,27 @@
+<button mat-button [matMenuTriggerFor]="aboveMenu" color="accent">
+  <ng-container [ngSwitch]="currentLang">
+    <ng-container
+      *ngSwitchCase="'en'"
+      [ngTemplateOutlet]="english"
+    ></ng-container>
+    <ng-container
+      *ngSwitchCase="'es'"
+      [ngTemplateOutlet]="spanish"
+    ></ng-container>
+  </ng-container>
+</button>
+<mat-menu #aboveMenu="matMenu" xPosition="before" yPosition="above">
+  <a mat-menu-item *ngIf="currentLang !== 'en'" href="en">
+    <ng-container *ngTemplateOutlet="english"></ng-container>
+  </a>
+  <a mat-menu-item *ngIf="currentLang !== 'es'" href="es">
+    <ng-container *ngTemplateOutlet="spanish"></ng-container>
+  </a>
+</mat-menu>
+
+<ng-template #english>
+  <img width="32px" heigth="32px" alt="us-flag" src="assets/us.svg" />
+</ng-template>
+<ng-template #spanish>
+  <img width="32px" heigth="32px" alt="spain-flag" src="assets/es.svg" />
+</ng-template>

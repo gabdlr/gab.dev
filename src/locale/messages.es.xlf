@@ -2,15 +2,15 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="6395467894802291527" datatype="html">
-        <source> Welcome to my site, I&apos;ll soon develop a fantastic Angular app here 👋 </source>
-        <target> Bienvenido a mi sitio web, pronto desarrollaré una aplicación de Angular fantástica acá 👋 </target>
+      <trans-unit id="8226874878218289194" datatype="html">
+        <source> Hi, I&apos;m Gabriel De Los Rios and I build enterprise grade frontend applications <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>👋<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Hola, soy Gabriel De Los Rios y construyó aplicaciones frontend de nivel empresarial <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>👋<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">4,6</context>
+          <context context-type="linenumber">6,8</context>
         </context-group>
-        <note priority="1" from="description">Welcoming message</note>
-        <note priority="1" from="meaning">welcome to the site</note>
+        <note priority="1" from="description">Soft presentation</note>
+        <note priority="1" from="meaning">introduction</note>
       </trans-unit>
     </body>
   </file>
