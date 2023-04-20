@@ -1,0 +1,11 @@
+.presentation-image-container {
+  display: flex;
+  position: relative;
+  align-self: flex-end;
+  @media (min-width: 600px) {
+    align-self: center;
+  }
+  @media (orientation: portrait) {
+    align-self: flex-end;
+  }
+}

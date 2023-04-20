@@ -1,4 +1,4 @@
-<app-controls-bar></app-controls-bar>
+<app-controls-bar/>
 <mat-grid-list
   [cols]="gridTiles.cols"
   [rowHeight]="gridTiles.heigth"
@@ -8,12 +8,14 @@
     [colspan]="gridTiles.photoTile.cols"
     [rowspan]="gridTiles.photoTile.rows"
   >
+    <app-presentation-image-wand/>
+    <app-presentation-image-hat/>
   </mat-grid-tile>
   <mat-grid-tile
     [colspan]="gridTiles.introductionTile.cols"
     [rowspan]="gridTiles.introductionTile.rows"
   >
-    <div style="padding: 10px">
+    <div class="presentation-message-container">
       <h1 i18n="introduction|Soft presentation">
         Hi, I'm Gabriel De Los Rios and I build enterprise grade frontend
         applications <span>👋</span>

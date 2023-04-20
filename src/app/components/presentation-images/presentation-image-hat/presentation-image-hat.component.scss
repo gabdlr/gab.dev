@@ -1,0 +1,17 @@
+.rat-image-container {
+  position: relative;
+  animation-name: rat-animation;
+  animation-duration: 2s;
+}
+
+@keyframes rat-animation {
+  from {
+    bottom: -100px;
+    right: -100px;
+  }
+  to {
+    bottom: 0;
+    right: 0;
+    rotate: 270deg;
+  }
+}

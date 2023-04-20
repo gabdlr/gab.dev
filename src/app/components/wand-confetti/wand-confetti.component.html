@@ -1,0 +1,10 @@
+<div class="wand-confetti-container">
+  <ng-container *ngIf="triggerConfetti">
+    <ng-particles
+      id="confetti"
+      [options]="particlesOptions"
+      [particlesInit]="particlesInit"
+      (particlesLoaded)="particlesLoaded($event)"
+    ></ng-particles>
+  </ng-container>
+</div>

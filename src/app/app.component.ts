@@ -6,6 +6,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ControlsBarComponent } from './components/controls-bar/controls-bar.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { WandConfettiComponent } from './components/wand-confetti/wand-confetti.component';
+import { PresentationImageWandComponent } from './components/presentation-images/presentation-image-wand/presentation-image-wand.component';
+import { PresentationImageHatComponent } from './components/presentation-images/presentation-image-hat/presentation-image-hat.component';
+
 @Component({
   standalone: true,
   selector: 'app-root',
@@ -18,11 +22,14 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
     MatIconModule,
     MatButtonModule,
     ControlsBarComponent,
+    WandConfettiComponent,
+    PresentationImageWandComponent,
+    PresentationImageHatComponent,
   ],
 })
 export class AppComponent {
   title = 'Gabriel De Los Rios, Web Developer';
-  handsetPortrait = false;
+
   gridTiles = {
     heigth: '25%',
     cols: 8,
@@ -39,12 +46,14 @@ export class AppComponent {
       rows: 1,
     },
   };
-  constructor(private breakpointObserver: BreakpointObserver) {}
 
+  constructor(private breakpointObserver: BreakpointObserver) {}
   ngOnInit() {
     this.breakpointObserver
       .observe([
         Breakpoints.Large,
+        Breakpoints.Medium,
+        Breakpoints.Small,
         Breakpoints.TabletPortrait,
         Breakpoints.TabletLandscape,
         Breakpoints.HandsetPortrait,
@@ -53,7 +62,6 @@ export class AppComponent {
       .subscribe({
         next: (result) => {
           const breakpoints = result.breakpoints;
-          this.handsetPortrait = false;
           if (breakpoints[Breakpoints.Large]) {
             this.gridTiles.cols = 8;
             this.gridTiles.heigth = '25%';
@@ -63,7 +71,7 @@ export class AppComponent {
             this.gridTiles.introductionTile.rows = 3;
             this.gridTiles.waveTile.cols = 8;
             this.gridTiles.waveTile.rows = 1;
-          } else if (breakpoints[Breakpoints.TabletPortrait]) {
+          } else if (breakpoints[Breakpoints.Medium]) {
             this.gridTiles.cols = 8;
             this.gridTiles.heigth = '25%';
             this.gridTiles.photoTile.cols = 2;
@@ -72,6 +80,24 @@ export class AppComponent {
             this.gridTiles.introductionTile.rows = 3;
             this.gridTiles.waveTile.cols = 8;
             this.gridTiles.waveTile.rows = 1;
+          } else if (breakpoints[Breakpoints.TabletPortrait]) {
+            this.gridTiles.cols = 1;
+            this.gridTiles.heigth = '5%';
+            this.gridTiles.photoTile.cols = 1;
+            this.gridTiles.photoTile.rows = 8;
+            this.gridTiles.introductionTile.cols = 1;
+            this.gridTiles.introductionTile.rows = 8;
+            this.gridTiles.waveTile.cols = 1;
+            this.gridTiles.waveTile.rows = 4;
+          } else if (breakpoints[Breakpoints.Small]) {
+            this.gridTiles.cols = 1;
+            this.gridTiles.heigth = '5%';
+            this.gridTiles.photoTile.cols = 1;
+            this.gridTiles.photoTile.rows = 8;
+            this.gridTiles.introductionTile.cols = 1;
+            this.gridTiles.introductionTile.rows = 8;
+            this.gridTiles.waveTile.cols = 1;
+            this.gridTiles.waveTile.rows = 4;
           } else if (breakpoints[Breakpoints.TabletLandscape]) {
             this.gridTiles.cols = 8;
             this.gridTiles.heigth = '25%';
@@ -81,16 +107,13 @@ export class AppComponent {
             this.gridTiles.waveTile.rows = 1;
           } else if (breakpoints[Breakpoints.HandsetPortrait]) {
             this.gridTiles.cols = 1;
-            this.gridTiles.heigth = '33.33%';
+            this.gridTiles.heigth = '5%';
             this.gridTiles.photoTile.cols = 1;
-            this.gridTiles.photoTile.rows = 1;
+            this.gridTiles.photoTile.rows = 6;
             this.gridTiles.introductionTile.cols = 1;
-            this.gridTiles.introductionTile.rows = 1;
+            this.gridTiles.introductionTile.rows = 10;
             this.gridTiles.waveTile.cols = 1;
-            this.gridTiles.waveTile.rows = 1;
-            this.handsetPortrait = true;
-          } else if (breakpoints[Breakpoints.HandsetLandscape]) {
-            //this.cols = 2;
+            this.gridTiles.waveTile.rows = 4;
           }
         },
       });

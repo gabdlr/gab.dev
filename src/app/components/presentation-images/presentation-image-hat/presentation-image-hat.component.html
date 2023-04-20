@@ -1,0 +1,19 @@
+<div class="presentation-image-container" *ngIf="isHandset || isTabletPortrait">
+  <div class="rat-image-container" *ngIf="showRat">
+    <img
+      alt="rat out of the hat"
+      src="assets/rat.svg"
+      [width]="ratImageSize.width"
+      [height]="ratImageSize.height"
+    />
+  </div>
+  <div (click)="getTheRabbitOutOfTheHat()">
+    <img
+      *ngIf="!showRat"
+      alt="magic hat"
+      src="assets/magic-hat.svg"
+      [width]="hatImageSize.width"
+      [height]="hatImageSize.height"
+    />
+  </div>
+</div>

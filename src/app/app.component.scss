@@ -1,13 +1,30 @@
 h1 {
-  font-size: 2rem;
+  font-size: 2.8rem;
   line-height: 55px;
   font-weight: 800;
   background: -webkit-linear-gradient(60deg, #00ff95, #5caff3 80%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  @media (min-width: 920px) {
-    font-size: 4rem;
+  @media (min-width: 600px) {
+    font-size: 3rem;
+    line-height: 60px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    font-size: 4.2rem;
+    line-height: 85px;
+  }
+  @media (min-width: 860px) {
+    font-size: 3.5rem;
     line-height: 70px;
+  }
+  @media (min-width: 960px) {
+    font-size: 3.8rem;
+    line-height: 70px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 4.5rem;
+    line-height: 80px;
   }
 }
 
@@ -148,5 +165,22 @@ h1 > span {
   height: 200px;
   rotate: 180deg;
   background: #5fc7da;
-  margin-top: 12%;
+  margin-top: 18%;
+  @media (min-width: 600px) {
+    margin-top: 12%;
+  }
+}
+
+.presentation-message-container {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media (min-width: 768px) {
+    align-self: flex-start;
+    padding-top: 20px;
+  }
+  @media (min-width: 960px) {
+    align-self: center;
+    padding-top: 170px;
+  }
 }

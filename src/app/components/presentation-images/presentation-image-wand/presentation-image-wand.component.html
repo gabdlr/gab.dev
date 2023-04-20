@@ -1,0 +1,13 @@
+<div
+  class="presentation-image-container"
+  *ngIf="!isHandset && !isTabletPortrait"
+>
+  <app-wand-confetti></app-wand-confetti>
+  <img
+    class="presentation-image-wand"
+    alt="magic wand"
+    src="assets/magic-wand.svg"
+    [width]="magicWandImageSize.width"
+    [height]="magicWandImageSize.height"
+  />
+</div>
