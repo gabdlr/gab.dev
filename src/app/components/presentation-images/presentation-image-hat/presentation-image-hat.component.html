@@ -7,7 +7,7 @@
       [height]="ratImageSize.height"
     />
   </div>
-  <div (click)="getTheRabbitOutOfTheHat()">
+  <div (click)="getTheRabbitOutOfTheHat()" data-test="magic-hat">
     <img
       *ngIf="!showRat"
       alt="magic hat"
